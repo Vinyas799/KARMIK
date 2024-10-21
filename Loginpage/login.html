@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karmik</title>
+    <link rel="stylesheet" href="stlye.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <h2>CONNECT-CREATE-SUCCEED</h2> -->
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>			
+			<h4><b>or use your email for registration</b></h4>
+            <select class="ui-dropdown" style="background-color: #eee; width: 100%;">
+				<option value="">Work</option>
+				<option value="5">Coconut Seller</option>
+				<option value="4">Electrician</option>
+				<option value="3">Painter</option>
+				<option value="2">Fish Seller</option>
+				<option value="1">Carpenter</option>
+				<option value="0">Barber</option>
+			</select><br>
+            
+
+            <input type="text" placeholder="Name" style="border-radius: 7px;"/><br>
+		    <input type="email" placeholder="Email" style="border-radius: 7px;"/><br>
+			<input type="password" placeholder="Password" style="border-radius: 7px;"/><br>
+			<button style="border-radius: 7px;">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+				<a href="#" class="social"><i class="fas fa-heart"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" style="border-radius: 7px;"/><br>
+			<input type="password" placeholder="Password" style="border-radius: 7px;"/>
+			<a href="#">Forgot your password?</a>
+			<button style="border-radius: 7px;">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn" style="border-radius: 7px;">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" style="border-radius: 7px;">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+<script >
+/* src="app.js" */
+	const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+</script>
+</html>
